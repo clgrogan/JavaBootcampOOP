@@ -1,6 +1,3 @@
-package wb.airline;
-
-import java.util.Arrays;
 
 public class Main {
   public static void main(String[] args) {
@@ -8,6 +5,14 @@ public class Main {
 
     System.out.println(
         "\n\nName: " + p01.getName() + "\nNationality: " + p01.getNationality()
+            + "\nDate of Birth: " + p01.getDateOfBirth()
+            + "\nSeat Number: " + p01.getPersonNumber() + "\n");
+
+    p01.setSeatNumber(10);
+
+    System.out.println(
+        "\nthis.executes 'p01.setSeatNumber(10);'\n  Then..."
+            + "\nName: " + p01.getName() + "\nNationality: " + p01.getNationality()
             + "\nDate of Birth: " + p01.getDateOfBirth()
             + "\nSeat Number: " + p01.getPersonNumber() + "\n");
   }

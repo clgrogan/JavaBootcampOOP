@@ -1,4 +1,3 @@
-package wb.airline;
 
 public class Airplane {
 

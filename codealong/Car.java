@@ -1,5 +1,3 @@
-package codealong;
-
 public class Car {
   public String make;
   public String model;
@@ -12,7 +10,7 @@ public class Car {
     this.make = make;
     this.model = model;
     this.price = price;
-    this.price = year;
+    this.year = year;
     this.color = color;
   }
 }
