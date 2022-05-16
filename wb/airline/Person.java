@@ -16,6 +16,13 @@ public class Person {
     this.personNumber = personNumber;
   }
 
+  public Person(Person source) {
+    this.name = source.getName();
+    this.nationality = source.getNationality();
+    this.dateOfBirth = source.getDateOfBirth();
+    this.personNumber = source.getPersonNumber();
+  }
+
   public void applyPassport() {
 
   }
