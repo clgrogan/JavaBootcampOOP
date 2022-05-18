@@ -8,13 +8,15 @@ public class Main {
             + "\nDate of Birth: " + p01.getDateOfBirth()
             + "\nSeat Number: " + p01.getPersonNumber() + "\n");
 
-    p01.setSeatNumber(10);
+    p01.chooseSeat();
 
     System.out.println(
         "\nthis.executes 'p01.setSeatNumber(10);'\n  Then..."
             + "\nName: " + p01.getName() + "\nNationality: " + p01.getNationality()
             + "\nDate of Birth: " + p01.getDateOfBirth()
             + "\nSeat Number: " + p01.getPersonNumber() + "\n");
+
+    printPassportApplicationResult(p01);
     /**
      * Using the copy constructor, set a person2 variable
      * equal to a copy of the first object.
@@ -28,10 +30,22 @@ public class Main {
     p02.setSeatNumber(3);
 
     System.out.println(
-        "\nUsing p02 created via constructor copy of p01..."
+        "Using p02 created via constructor copy of p01..."
             + "\nName: " + p02.getName() + "\nNationality: " + p02.getNationality()
             + "\nDate of Birth: " + p02.getDateOfBirth()
             + "\nSeat Number: " + p02.getPersonNumber() + "\n");
+
+    printPassportApplicationResult(p02);
+  }
+
+  private static void printPassportApplicationResult(Person passenger) {
+
+    if (passenger.applyPassport()) {
+      System.out.println("Congratulations, " + passenger.getName() + ". Your passport was approved!");
+    } else {
+      System.out.println("We are sorry, " + passenger.getName() + ". We cannot process your passport application.");
+    }
+    System.out.println();
 
   }
 }

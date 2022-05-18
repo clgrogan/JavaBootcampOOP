@@ -23,11 +23,26 @@ public class Person {
     this.personNumber = source.getPersonNumber();
   }
 
-  public void applyPassport() {
-
+  /**
+   * Function name: applyPassport
+   * 
+   * @return (boolean)
+   *
+   *         Inside the function:
+   *         1. Returns a random boolean of true or false.
+   */
+  public boolean applyPassport() {
+    return (((int) (Math.random() * 10))) % 2 == 0;
   }
 
+  /**
+   * Function name: chooseSeat
+   *
+   * Inside the function:
+   * 1. Sets this.seat to a random number between 1 -- 11.
+   */
   public void chooseSeat() {
+    this.setSeatNumber((int) (Math.random() * 11 + 1));
 
   }
 
