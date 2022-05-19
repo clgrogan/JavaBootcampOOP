@@ -9,7 +9,7 @@ public class Car {
   private String[] parts;
 
   public Car(String make, String model, double price, int year, String color, String[] parts) {
-    System.out.println("\n Car constructor executing\n");
+    // System.out.println("\n Car constructor executing\n");
     this.make = make;
     this.model = model;
     this.price = price;
@@ -97,6 +97,19 @@ public class Car {
 
   public void setParts(String[] parts) {
     this.parts = Arrays.copyOf(parts, parts.length);
+  }
+
+  public String toString() {
+    String rString = "  Make: " + this.make + ".\n"
+        + "  Model: " + this.model + ".\n"
+        + "  Price: " + this.price + ".\n"
+        + "  Year: " + this.year + ".\n"
+        + "  Color: " + this.color + ".\n"
+        + "  Parts: " + Arrays.toString(this.parts) + ".\n"
+
+    ;
+
+    return rString;
   }
 
 }

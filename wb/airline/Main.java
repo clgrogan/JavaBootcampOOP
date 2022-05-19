@@ -1,6 +1,26 @@
+import java.util.Arrays;
 
 public class Main {
   public static void main(String[] args) {
+    Person person = new Person("Ryan Slim", "Merica", "07/04/1776", 4);
+    if (person.applyPassport() == true)
+      person.setPassport();
+    // System.out.println("\nName: " + person.getName() + "\n" +
+    // "Nationality: " + person.getNationality() + "\n" +
+    // "Date of Birth: " + person.getDateOfBirth() + "\n" +
+    // "Seat Number: " + person.getPersonNumber() + "\n" + "Passport: " +
+    // Arrays.toString(person.getPassport()) + "\n");
+    System.out.println();
+    System.out.println(person);
+  }
+
+  /**
+   * I retained the old main method instead of deleting it per Workbook Part 6
+   * instructions
+   * 
+   * @param args
+   */
+  public static void mainOld(String[] args) {
     Person p01 = new Person("Ryan Slim", "Canadian", "01/01/1111", 5);
 
     System.out.println(
