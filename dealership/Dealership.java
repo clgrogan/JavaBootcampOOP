@@ -21,33 +21,37 @@ public class Dealership {
         this.cars[index] = null;
     }
 
-    /** Task 2 - Re-write the search action.
+    /**
+     * Task 2 - Re-write the search action.
      * Function name: search
      *
-     * @param make (String)
+     * @param make   (String)
      * @param budget (int)
      * @return (int)
      *
-     * Inside the function:
-     *   1. Loops through every element in the cars field.
-     *   2. Skips the run if the element is null.
-     *   3. If it finds a car the user can afford:
-     *     • println: \nWe found a car in spot <i> \n\n <toString>
-     *     • print: If you're interested, type 'yes':
-     *     • returns the index
-     *   4. If the loop runs and it didn't find a car
-     *     • println: \nYour search didn't match any results.\n
-     *     • returns 404
+     *         Inside the function:
+     *         1. Loops through every element in the cars field.
+     *         2. Skips the run if the element is null.
+     *         3. If it finds a car the user can afford:
+     *         • println: \nWe found a car in spot <i> \n\n <toString>
+     *         • print: If you're interested, type 'yes':
+     *         • returns the index
+     *         4. If the loop runs and it didn't find a car
+     *         • println: \nYour search didn't match any results.\n
+     *         • returns 404
      */
-    public String search(String make, int budget) {
+    public int search(String make, int budget) {
         for (int i = 0; i < this.cars.length; i++) {
             if (this.cars[i] == null) {
                 continue;
-            } else if (this.cars[i].getMake().equals(make) && this.cars[i].getPrice() <= budget) {
-                return "\nWe found one in spot " + i + "\n" + this.cars[i].toString() + "\nAre you interested ?";
+            } else if (this.cars[i].getMake().equalsIgnoreCase(make) && this.cars[i].getPrice() <= budget) {
+                System.out.println("\nWe found one in spot " + i + "\n" + this.cars[i].toString()
+                        + "\nIf you are interested type 'yes':");
+                return i;
             }
         }
-        return "Sorry, we couldn't find any cars.";
+        System.out.println("\nYour search didn't match any results.\n");
+        return 404;
     }
 
     public String toString() {
@@ -62,6 +66,5 @@ public class Dealership {
         }
         return temp;
     }
-
 
 }
